@@ -1,0 +1,262 @@
+/* Reset */
+* {margin:0;padding:0;box-sizing:border-box;}
+
+
+/* Body Styling */
+body {
+  font-family: 'IM FELL English', serif;
+  line-height: 1.7;
+  color: #eae6f1;
+  background: linear-gradient(180deg, #0b0b0b 0%, #111111 100%);
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {position:fixed;width:100%;top:0;background:rgba(0,0,0,0.7);padding:1rem;z-index:100;}
+nav ul {display:flex;justify-content:center;list-style:none;}
+nav ul li {margin:0 1rem;}
+nav ul li a {text-decoration:none;color:#fff;font-weight:500;transition:0.3s;font-size: large;}
+nav ul li a:hover {color:#a00;}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+.video-bg {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+.overlay-hero {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);z-index:2;}
+.hero-content {position:relative;z-index:3;max-width:850px;padding:2rem;}
+.hero h1 {font-size:3rem;font-weight:700;color:#fff;margin-bottom:1rem;text-shadow:2px 2px 12px rgba(0,0,0,0.6);}
+.hero p {font-size:1.2rem;color:#f0f0f0;line-height:1.6;margin-bottom:2rem;text-shadow:1px 1px 8px rgba(0,0,0,0.5);}
+
+
+/* Standard Section */
+.section {padding:6rem 2rem;text-align:center;background:#222;}
+.section h2 {font-size:2.5rem;margin-bottom:1rem;}
+.section p {font-size:1.2rem;margin-bottom:1.5rem;}
+.section.dark {background:#111;}
+
+/* Video Sections (Hidden / Known) */
+.video-section {position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
+.video-section .bg-video {position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;}
+.video-section .overlay {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:2;}
+.video-section .content {position:relative;z-index:3;max-width:800px;padding:2rem;}
+.video-section .content h2 {font-size:2.5rem;margin-bottom:1rem;}
+.video-section .content p {font-size:1.2rem;margin-bottom:1.5rem;}
+.video-section .content .btn {margin-top:1rem;}
+
+/* Footer */
+footer {text-align:center;padding:2rem;background:#000;}
+
+.video-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 850px;
+  padding: 2rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Occult Vein Button */
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-family: 'IM FELL English', serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #f5e6c8;
+  background-color: #1a0d0d;
+  border: 2px solid #5a0f0f;
+  border-radius: 6px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(90,15,15,0.7), 0 6px 14px rgba(0,0,0,0.8);
+}
+
+/* Veins effect (more random, angled) */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: repeating-linear-gradient(
+    25deg,
+    rgba(120, 0, 0, 0.25),
+    rgba(120, 0, 0, 0.25) 2px,
+    transparent 4px,
+    transparent 12px
+  ),
+  repeating-linear-gradient(
+    -35deg,
+    rgba(90, 0, 0, 0.2),
+    rgba(90, 0, 0, 0.2) 1px,
+    transparent 5px,
+    transparent 15px
+  );
+  animation: bleedVeins 12s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Inner crimson glow */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  box-shadow: inset 0 0 20px rgba(160, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Gentle shifting of veins */
+@keyframes bleedVeins {
+  0%   { transform: translate(0,0); }
+  50%  { transform: translate(-8px, 6px); }
+  100% { transform: translate(0,0); }
+}
+
+/* Hover */
+.btn:hover {
+  color: #fffbe6;
+  background-color: #2a0c0c;
+  border-color: #a00;
+  box-shadow: 0 0 25px rgba(180,0,0,0.8), 0 10px 20px rgba(0,0,0,0.8);
+  transform: scale(1.05);
+}
+
+
+/* Contact Section */
+#contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+#contact .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+#contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+#contact .content {
+  z-index: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#contact a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+  background: #050505;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+

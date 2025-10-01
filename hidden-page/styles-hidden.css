@@ -1,14 +1,22 @@
 /* Reset */
 * {margin:0;padding:0;box-sizing:border-box;}
-body {font-family:'Helvetica Neue',sans-serif;line-height:1.6;color:#fff;background:#111;}
+
+/* Body Styling */
+body {
+  font-family: 'IM FELL English', serif;
+  line-height: 1.7;
+  color: #eae6f1;
+  background: linear-gradient(180deg, #0b0b0b 0%, #111111 100%);
+  padding: 0;
+  margin: 0;
+}
 
 /* Header */
 header {position:fixed;width:100%;top:0;background:rgba(0,0,0,0.7);padding:1rem;z-index:100;}
 nav ul {display:flex;justify-content:center;list-style:none;}
 nav ul li {margin:0 1rem;}
-nav ul li a {text-decoration:none;color:#fff;font-weight:600;transition:0.3s;}
-nav ul li a:hover,
-nav ul li a.active {color:#00ffcc;}
+nav ul li a {text-decoration:none;color:#fff;font-weight:500;transition:0.3s;font-size: large;}
+nav ul li a:hover {color:#a00;}
 
 /* Hero Section */
 .hero {
@@ -47,7 +55,7 @@ nav ul li a.active {color:#00ffcc;}
   transform:translateY(-5px);
   box-shadow:0 8px 20px rgba(0,0,0,0.6);
 }
-.post h2 {font-size:1.5rem;margin-bottom:1rem;color:#00ffcc;}
+.post h2 {font-size:1.5rem;margin-bottom:1rem;color:#a00;}
 .post p {font-size:1rem;margin-bottom:1rem;color:#ddd;}
 .post a {
   color:#ffd700;
